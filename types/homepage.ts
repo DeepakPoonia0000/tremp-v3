@@ -4,7 +4,12 @@ export type HomepageSectionType =
   | "featured-products"
   | "banner"
   | "announcement"
-  | "newsletter";
+  | "newsletter"
+  | "testimonials"
+  | "categories"
+  | "stats"
+  | "cta"
+  | "blog-posts";
 
 export interface HomepageSection {
   id: string;

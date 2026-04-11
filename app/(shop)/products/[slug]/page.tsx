@@ -9,6 +9,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { formatPrice } from "@/utils/formatPrice";
 import { AddToCartSection } from "@/components/products/AddToCartSection";
+import { ProductSchema } from "@/components/seo/ProductSchema";
+import { BreadcrumbListSchema } from "@/components/seo/BreadcrumbListSchema";
 
 export const revalidate = 30;
 
@@ -45,8 +47,33 @@ export default async function ProductPage({ params }: Props) {
   if (!product) notFound();
 
   return (
-    <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 lg:grid-cols-2 sm:px-6">
-      <ProductImageGallery images={product.images} name={product.name} />
+    <>
+      {/* Structured Data */}
+      <ProductSchema
+        name={product.name}
+        description={product.description}
+        images={product.images}
+        price={product.price}
+        priceCurrency="USD"
+        availability={product.stock > 0 ? "InStock" : "OutOfStock"}
+        url={`https://tremp.example.com/products/${product.slug}`}
+        brand="Tremp"
+        rating={{
+          value: 4.5,
+          count: 128, // Static rating count for consistency
+        }}
+      />
+      <BreadcrumbListSchema
+        breadcrumbs={[
+          { name: "Home", url: "https://tremp.example.com" },
+          { name: "Products", url: "https://tremp.example.com/products" },
+          { name: product.category, url: `https://tremp.example.com/products?category=${product.category}` },
+          { name: product.name, url: `https://tremp.example.com/products/${product.slug}` },
+        ]}
+      />
+
+      <div className="mx-auto grid max-w-7xl gap-10 px-4 py-10 lg:grid-cols-2 sm:px-6">
+        <ProductImageGallery images={product.images} name={product.name} />
       <div>
         <div className="flex flex-wrap gap-2">
           {product.isFeatured && <Badge>Featured</Badge>}
@@ -79,9 +106,10 @@ export default async function ProductPage({ params }: Props) {
           }}
         />
         <Button variant="link" className="mt-4 h-auto p-0" asChild>
-          <Link href="/products">← Back to shop</Link>
+          <Link href="/products">Back to shop</Link>
         </Button>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

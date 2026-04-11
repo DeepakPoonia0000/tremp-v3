@@ -7,6 +7,7 @@ import { signOut, useSession } from "next-auth/react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { cn } from "@/utils/cn";
+import { EnhancedSearch } from "@/components/search/EnhancedSearch";
 import { useCart } from "@/hooks/useCart";
 import { useAppDispatch, useAppSelector } from "@/store/hooks";
 import { toggleMobileMenu } from "@/store/slices/uiSlice";
@@ -30,7 +31,7 @@ export function Navbar() {
   const { items, setOpen } = useCart();
   const dispatch = useAppDispatch();
   const mobileOpen = useAppSelector((s) => s.ui.mobileMenuOpen);
-  const cartCount = items.reduce((n, i) => n + i.qty, 0);
+  const cartCount = items.reduce((n: number, i: any) => n + i.qty, 0);
 
   return (
     <header className="sticky top-0 z-40 border-b border-border bg-background/95 backdrop-blur">
@@ -64,17 +65,9 @@ export function Navbar() {
             ))}
           </nav>
         </div>
-        <form action="/search" className="hidden max-w-sm flex-1 md:flex">
-          <div className="relative w-full">
-            <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              name="q"
-              placeholder="Search products..."
-              className="pl-9"
-              aria-label="Search"
-            />
-          </div>
-        </form>
+        <div className="hidden max-w-sm flex-1 md:flex">
+          <EnhancedSearch />
+        </div>
         <div className="flex items-center gap-1 sm:gap-2">
           <Button variant="ghost" size="icon" asChild>
             <Link href="/wishlist" aria-label="Wishlist">

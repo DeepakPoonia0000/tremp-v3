@@ -9,7 +9,7 @@ export async function FeaturedProducts({
 }: {
   section: HomepageSection;
 }) {
-  const data = section.data as {
+  const data = (section.data ?? {}) as {
     productIds?: string[];
     tag?: string;
     limit?: number;

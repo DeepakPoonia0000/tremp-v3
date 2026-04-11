@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Atelier Noir | Linen Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f9f9f7",
+                        "on-background": "#1a1c1b",
+                        "surface-tint": "#984636",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#ffb4a5",
+                        "on-surface-variant": "#55433f",
+                        "on-primary-fixed-variant": "#7a2f21",
+                        "tertiary-fixed": "#f4dfcb",
+                        "tertiary-container": "#635445",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "surface-container-low": "#f4f4f2",
+                        "inverse-on-surface": "#f1f1ef",
+                        "on-primary-container": "#ffbcb0",
+                        "outline": "#88726e",
+                        "surface-variant": "#e2e3e1",
+                        "on-error": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeeec",
+                        "secondary-fixed": "#e4e2e1",
+                        "background": "#f9f9f7",
+                        "primary-fixed": "#ffdad3",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#3f0400",
+                        "tertiary": "#4a3d2f",
+                        "surface-container-high": "#e8e8e6",
+                        "on-tertiary-container": "#ddc9b6",
+                        "surface-container-highest": "#e2e3e1",
+                        "on-tertiary-fixed-variant": "#524436",
+                        "on-tertiary-fixed": "#241a0e",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-tertiary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "inverse-surface": "#2f3130",
+                        "secondary": "#5f5e5e",
+                        "secondary-container": "#e4e2e1",
+                        "tertiary-fixed-dim": "#d7c3b0",
+                        "outline-variant": "#dbc1bc",
+                        "primary-container": "#8e3e2f",
+                        "primary": "#70281a",
+                        "surface-dim": "#dadad8",
+                        "surface": "#f9f9f7",
+                        "on-secondary-container": "#656464",
+                        "inverse-primary": "#ffb4a5",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1b"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Noto Serif"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-[#f9f9f7]/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(85,67,63,0.06)] flex justify-between items-center px-12 py-6 w-full max-w-[1920px] mx-auto">
+<div class="text-3xl font-serif tracking-tighter text-[#1a1c1b]">Atelier Noir</div>
+<div class="hidden md:flex gap-12">
+<a class="font-sans uppercase tracking-widest text-xs text-[#1a1c1b] hover:text-[#70281a] transition-colors duration-300" href="#">Collections</a>
+<a class="font-sans uppercase tracking-widest text-xs text-[#70281a] border-b border-[#70281a] pb-1 hover:text-[#70281a] transition-colors duration-300" href="#">Tailoring</a>
+<a class="font-sans uppercase tracking-widest text-xs text-[#1a1c1b] hover:text-[#70281a] transition-colors duration-300" href="#">Accessories</a>
+<a class="font-sans uppercase tracking-widest text-xs text-[#1a1c1b] hover:text-[#70281a] transition-colors duration-300" href="#">The Journal</a>
+<a class="font-sans uppercase tracking-widest text-xs text-[#1a1c1b] hover:text-[#70281a] transition-colors duration-300" href="#">Heritage</a>
+</div>
+<div class="flex gap-6 items-center text-[#70281a]">
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">shopping_bag</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">favorite</span>
+<span class="material-symbols-outlined cursor-pointer hover:opacity-70 transition-opacity">account_circle</span>
+</div>
+</nav>
+<main class="pt-32 pb-20 px-12 max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16">
+<!-- Product Visuals -->
+<section class="lg:col-span-7 flex flex-col gap-8">
+<div class="aspect-[4/5] overflow-hidden rounded-lg bg-surface-container-low">
+<img alt="Sun-washed linen shirt" class="w-full h-full object-cover" data-alt="Close-up of a high-quality sun-washed ivory linen shirt hanging against a textured warm white wall in soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWk6pt5YWMPzZmYi1NczY7apjlpcaBfdhKkYrPmTVG0PE38zuWfN9kPlgdQV9f90SqhBwLRrkWqp2sdPyWxb_GfGUhClF8KA7yMYD5GXrXQfnHMO1kJQ5Wn7zXDOCJxHE1-_FGOwGMXYZQZKYN8kMicwSca_qoMWO-rsnS_Qnl5yQj2Nkq1lDzkxLhugAn5xp5ejUdJBiTfGR9fQEOZB0yhamnPJNOhv-FBClnpvhzWSXREVBSMNEOc-uRQRkMYB88AgMzSbXG9Rk7"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="aspect-[4/5] overflow-hidden rounded-lg bg-surface-container-low">
+<img alt="Linen texture detail" class="w-full h-full object-cover" data-alt="Extreme close-up of premium linen fabric texture showing intricate weave and soft sun-bleached natural ivory fibers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPhvXG7OtE0R06C5dk9IKbDcIUOo4B4YARcttiAL0oNNCNQzhA9989_5cRJcAKwzVKSke4Sl7O19tkL2taeL6ampiO-bN04AkvZPESxRRzCJ8oWINEixAJjmPg0j5iWFOYU4Eo20_wurEaOKWsm-ZjqL80waCO-xekbbNXRKm_-bMxgYebzNb1v0DDL7QIhOqbMBhnDhtVvwYX2qgYKX_ylZAkNdBSzB080rvagVBEv2oGWqNR_NH8zKZCUPhTfX0boOGttZY4tTcK"/>
+</div>
+<div class="aspect-[4/5] overflow-hidden rounded-lg bg-surface-container-low">
+<img alt="Model wearing linen" class="w-full h-full object-cover" data-alt="Model wearing an oversized linen shirt standing in a sun-drenched minimalist room with long shadows and warm highlights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo-8tH1G3IcN51CHL05DOpQzeKAbkfloteyS2DrQuQvAP2VLBTp8XKFc7laiTsTMK2FyoMLEaptZPwoUGCkAvoGLck3cVHUAnX41JkqN05gAlTCAUyLsQn8dvcuD-Gc0YNMYU_8YKwTtPhMDXkIUuiIXfKSzhWJSNmoU1d7TmoITsNd_k84Iyys0nSlvfJ-88Br9aYgnwbhtkCcNcjh93u15uBZwa5h5AwQJP1tHFKSCk1EkrdLgX-zJ__ovfHiWNZaGVS9iLtau2L"/>
+</div>
+</div>
+</section>
+<!-- Product Details -->
+<section class="lg:col-span-5 flex flex-col">
+<div class="sticky top-40 space-y-10">
+<div class="space-y-4">
+<p class="font-sans uppercase tracking-[0.2em] text-[10px] text-on-surface-variant">Summer Editorial — 04</p>
+<h1 class="font-serif italic text-5xl tracking-tight text-on-background">Washed Linen Atelier Shirt</h1>
+<p class="text-2xl font-light text-on-background/80 tracking-tight">€285,00</p>
+</div>
+<div class="space-y-6">
+<p class="text-sm leading-relaxed text-on-surface-variant max-w-md">
+                        Crafted from our signature heavyweight Belgian linen, this piece undergoes a proprietary enzyme wash to achieve a lived-in softness that maintains its architectural drape. Designed for a generous, airy silhouette.
+                    </p>
+<!-- Color Selection -->
+<div class="space-y-3">
+<span class="text-[10px] uppercase tracking-widest font-bold">Color — Bone</span>
+<div class="flex gap-3">
+<button class="w-8 h-8 rounded-full bg-[#f4f4f2] ring-1 ring-offset-2 ring-primary"></button>
+<button class="w-8 h-8 rounded-full bg-[#3d3d3b] hover:ring-1 hover:ring-offset-2 hover:ring-outline-variant transition-all"></button>
+<button class="w-8 h-8 rounded-full bg-[#70281a] hover:ring-1 hover:ring-offset-2 hover:ring-outline-variant transition-all"></button>
+</div>
+</div>
+<!-- Size Selection -->
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<span class="text-[10px] uppercase tracking-widest font-bold">Size</span>
+<button class="text-[10px] uppercase tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-colors">Size Guide</button>
+</div>
+<div class="grid grid-cols-4 gap-2">
+<button class="py-3 text-xs uppercase tracking-widest bg-surface border border-outline-variant hover:bg-surface-container-low transition-colors">XS</button>
+<button class="py-3 text-xs uppercase tracking-widest bg-surface border border-outline-variant hover:bg-surface-container-low transition-colors">S</button>
+<button class="py-3 text-xs uppercase tracking-widest bg-surface-container-highest border border-on-background/10 font-bold">M</button>
+<button class="py-3 text-xs uppercase tracking-widest bg-surface border border-outline-variant hover:bg-surface-container-low transition-colors">L</button>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<button class="w-full bg-gradient-to-tr from-primary to-primary-container text-on-primary py-5 rounded-lg uppercase tracking-[0.15em] text-xs font-semibold shadow-xl shadow-primary/10 hover:opacity-90 transition-all">
+                        Add to Bag
+                    </button>
+<button class="w-full bg-surface-container-highest text-on-surface py-5 rounded-lg uppercase tracking-[0.15em] text-xs font-semibold hover:bg-surface-container-high transition-all">
+                        Find in Boutique
+                    </button>
+</div>
+<!-- Accordions -->
+<div class="border-t border-outline-variant/30 pt-4">
+<details class="group py-4 border-b border-outline-variant/30">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<span class="text-xs uppercase tracking-widest font-semibold">Material &amp; Care</span>
+<span class="material-symbols-outlined text-lg transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-sm text-on-surface-variant leading-relaxed space-y-2">
+<p>100% Organic Belgian Linen. Hand-harvested and woven in a heritage mill.</p>
+<ul class="list-disc pl-4 space-y-1">
+<li>Machine wash delicate at 30°C</li>
+<li>Do not tumble dry</li>
+<li>Steam iron while slightly damp for best results</li>
+</ul>
+</div>
+</details>
+<details class="group py-4 border-b border-outline-variant/30">
+<summary class="flex justify-between items-center cursor-pointer list-none">
+<span class="text-xs uppercase tracking-widest font-semibold">Sustainability</span>
+<span class="material-symbols-outlined text-lg transition-transform group-open:rotate-180">expand_more</span>
+</summary>
+<div class="pt-4 pb-2 text-sm text-on-surface-variant leading-relaxed">
+<p>Our linen is grown without irrigation and is fully biodegradable. We use a closed-loop water system in our dyeing process, reducing chemical runoff by 98% compared to industry standards.</p>
+</div>
+</details>
+</div>
+</div>
+</section>
+</main>
+<!-- Content Transition (Surface Container) -->
+<section class="bg-surface-container-low py-24 px-12">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-serif italic text-4xl text-on-background">Complete the Silhouette</h2>
+<p class="text-on-surface-variant mt-2 text-sm tracking-wide uppercase">Curation — 002</p>
+</div>
+<button class="text-xs uppercase tracking-widest text-primary font-bold group flex items-center gap-2">
+                    View Full Look
+                    <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Related Product 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-6 relative">
+<img alt="Tapered linen trousers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Minimalist photograph of tailored cream linen trousers hanging on a wooden rail against a neutral architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfcBIGqlkpEKNHkF9S8j1fvFXBH0wXyeOiIO4ciRs9XfLXlQT85mfSxamkHhIgqWO0x635Y2g85rPJvOfeM1aM_N03g-9OIBklW2OiMMMDTxYdb9oeAKcHnzlJpKkZAxgrChTLIAi2iZlNBpb9rzhAOAkpEnT9W4jxbqox8hslqsgEAb0fd6Kg7s1vo7_ckOTg9mUVPzajsme6yyicHXTbAjglkNRRMGlP8EJ1j4X2-o4HqcWAhqYpnABc7C2t8EDf5IeVGu9XTk1a"/>
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-md p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</div>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Trousers</p>
+<h3 class="font-serif text-lg">Architectural Linen Trouser</h3>
+<p class="text-sm font-light">€310,00</p>
+</div>
+</div>
+<!-- Related Product 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-6 relative">
+<img alt="Leather sandals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Handcrafted minimal leather sandals in a deep mahogany brown placed on a sunlit stone floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkFqE_gna3NnVoweVNpVyN0LMKlM_tkWBG3crgoAX0sI_aRuMoG11huD1gFjTvOZqIhijMGI2SWwB1Fl5-afSwKuXBlfHBCDqw1-3r-pLvh25n8R0OaC5g0bIF_zS2m7idaz_n60OefA_M68Rw31o5RgBfAH6pBd51wr8V3NmnORhZDoKjVxQ12yB9shBKlKBFfG2yQNa4BqfyhPI8o_1YV7-v6Ym7Ytf_GQHeO32CaeHqyhWqeT_UX3L3u-vAcdq-30nwQLm-YQDB"/>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Footwear</p>
+<h3 class="font-serif text-lg">Atelier V-Sandals</h3>
+<p class="text-sm font-light">€245,00</p>
+</div>
+</div>
+<!-- Related Product 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-lg mb-6 relative">
+<img alt="Canvas tote" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Luxury structured canvas tote bag with leather trim detail in a minimalist studio lighting setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIshWHtglaTwbyRqG1UaaTNwEvZYZR3brTax5sOYsAkY2AtS1xE_23P46iaVZYAd7AhWqacef9UzH7bD00-ff7EPyKWu6zkMEosw6lNBYUkySpq9MyYN4SGS_3_VCcIH4bLWlVfUfRxgy0EoivVwybXVgjhi6NTCjgrqn21g11Lkj5k-NXELMjZn9Vrq5tY6tvSHMy1Sqquz5pA6Vb_6caeiRJXPuARyQqiecup0C_0D-vBiQ28JCoPU_N3XPefCz1nR9TBvanpPRt"/>
+</div>
+<div class="space-y-1">
+<p class="text-[10px] uppercase tracking-widest text-on-surface-variant">Accessories</p>
+<h3 class="font-serif text-lg">Woven Canvas Holdall</h3>
+<p class="text-sm font-light">€420,00</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#f4f4f2] relative w-full py-20 px-12">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-[1920px] mx-auto">
+<div class="col-span-1 md:col-span-1">
+<span class="font-serif text-xl mb-4 block text-[#70281a]">Atelier Noir</span>
+<p class="text-[10px] uppercase tracking-widest text-[#1a1c1b]/60 leading-relaxed max-w-[200px]">
+                    Crafting the modern wardrobe with a focus on tactile luxury and architectural permanence.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Service</span>
+<a class="font-sans text-xs uppercase tracking-widest text-[#1a1c1b]/60 hover:text-[#70281a] transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#1a1c1b]/60 hover:text-[#70281a] transition-all" href="#">Size Guide</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#1a1c1b]/60 hover:text-[#70281a] transition-all" href="#">Contact Us</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Heritage</span>
+<a class="font-sans text-xs uppercase tracking-widest text-[#1a1c1b]/60 hover:text-[#70281a] transition-all" href="#">Sustainability</a>
+<a class="font-sans text-xs uppercase tracking-widest text-[#1a1c1b]/60 hover:text-[#70281a] transition-all" href="#">Privacy Policy</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-[10px] font-bold uppercase tracking-[0.2em] mb-2">Journal</span>
+<p class="text-[10px] text-[#1a1c1b]/60 leading-relaxed mb-4 uppercase tracking-widest">Subscribe for editorial updates and private collection previews.</p>
+<div class="flex border-b border-outline-variant/30 py-2">
+<input class="bg-transparent border-none text-xs w-full focus:ring-0 placeholder:text-outline-variant" placeholder="Email Address" type="email"/>
+<span class="material-symbols-outlined text-primary cursor-pointer">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="mt-20 text-center">
+<p class="text-[10px] uppercase tracking-widest text-[#1a1c1b]/40">© 2024 Atelier Noir. Crafted with Intention.</p>
+</div>
+</footer>
+</body></html>

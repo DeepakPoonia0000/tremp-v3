@@ -6,6 +6,8 @@ import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { CartDrawer } from "@/components/cart/CartDrawer";
+import { OrganizationSchema } from "@/components/seo/OrganizationSchema";
+import { WebSiteSchema } from "@/components/seo/WebSiteSchema";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -37,6 +39,24 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <OrganizationSchema
+          name="Tremp"
+          url="https://tremp.example.com"
+          description="Discover contemporary clothing and essentials."
+          logo="https://tremp.example.com/logo.png"
+          contactPoint={{
+            contactType: "customer service",
+            availableLanguage: "English",
+          }}
+        />
+        <WebSiteSchema
+          name="Tremp"
+          url="https://tremp.example.com"
+          description="Discover contemporary clothing and essentials."
+          searchUrl="https://tremp.example.com/search?q={search_term}"
+        />
+      </head>
       <body className="flex min-h-full flex-col">
         <Providers>
           <AnnouncementBar />
